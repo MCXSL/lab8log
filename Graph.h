@@ -13,6 +13,7 @@ void printAdjacencyList(const AdjacencyList& graph);
 std::vector<int> bfsMatrix(const Matrix& graph);
 std::vector<int> bfsList(const AdjacencyList& graph);
 std::vector<int> bfsLinkedQueue(const Matrix& graph);
+std::vector<int> bfsListLinkedQueue(const AdjacencyList& graph);
 void printOrder(const std::vector<int>& order);
 void compareTime();
 

@@ -10,9 +10,9 @@ int main() {
     SetConsoleCP(CP_UTF8);
 #endif
     int size;
-    std::cout << "Введите число вершин (1–100): ";
-    if (!(std::cin >> size) || size < 1 || size > 100) {
-        std::cerr << "Ошибка: нужно целое число от 1 до 100.\n";
+    std::cout << "Введите число вершин (1–500): ";
+    if (!(std::cin >> size) || size < 1 || size > 500) {
+        std::cerr << "Ошибка: нужно целое число от 1 до 500.\n";
         return 1;
     }
 
@@ -29,6 +29,8 @@ int main() {
     printOrder(bfsList(list));
     std::cout << "\nОбход по матрице (своя очередь):\n";
     printOrder(bfsLinkedQueue(graph));
+    std::cout << "\nОбход по спискам (своя очередь):\n";
+    printOrder(bfsListLinkedQueue(list));
 
     compareTime();
     return 0;
